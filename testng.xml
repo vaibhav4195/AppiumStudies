@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" >
+	<test name="First Test">
+		<parameter name="portNumber" value="6667" />
+		<parameter name="appName" value="GeneralStoreApp" />
+		<classes>
+			<class name="baseClass.FirstParallelTest" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="Second Test">
+		<parameter name="portNumber" value="7776" />
+		<parameter name="appName" value="ApiDemo" />
+		<classes>
+			<class name="baseClass.SecondParallelTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

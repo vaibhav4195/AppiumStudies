@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test name="First Test(failed)" parallel="tests">
+    <parameter name="appName" value="GeneralStoreApp"/>
+    <parameter name="portNumber" value="6667"/>
+    <classes>
+      <class name="baseClass.FirstParallelTest">
+        <methods>
+          <include name="firstExecution"/>
+          <include name="killAllNodes"/>
+          <include name="parallelCapabilities"/>
+          <include name="closeDriver"/>
+        </methods>
+      </class> <!-- baseClass.FirstParallelTest -->
+    </classes>
+  </test> <!-- First Test(failed) -->
+  <test name="Second Test(failed)" parallel="tests">
+    <parameter name="appName" value="ApiDemo"/>
+    <parameter name="portNumber" value="7776"/>
+    <classes>
+      <class name="baseClass.SecondParallelTest">
+        <methods>
+          <include name="firstExecution"/>
+          <include name="killAllNodes"/>
+          <include name="parallelCapabilities"/>
+          <include name="closeDriver"/>
+        </methods>
+      </class> <!-- baseClass.SecondParallelTest -->
+    </classes>
+  </test> <!-- Second Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
